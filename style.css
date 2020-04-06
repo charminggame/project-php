@@ -24,13 +24,7 @@ form {
     button:hover {
     opacity: 0.8;
   }
-  
-    .cancelbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: #f44336;
-  }
-  
+    
     .imgcontainer {
     text-align: center;
     margin: 24px 0 12px 0;
@@ -58,4 +52,10 @@ form {
     .cancelbtn {
       width: 100%;
     }
+  }
+
+  .box{
+    border-style: solid;
+    border-radius: 10px;
+    border: black;
   }

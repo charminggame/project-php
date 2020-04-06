@@ -3,13 +3,13 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>Login REQSubject</title>
 	<link rel="stylesheet" type="text/css" href="style.css"> 
 </head>
 
 <body>
 <form action="page_auto.php" method="post">
-  <div class="imgcontainer">
+<div class="imgcontainer">
     <img src="img/Psu_logo.png" alt="Avatar" class="avatar">
   </div>
 
@@ -26,9 +26,6 @@
     </label>
   </div>
 
-  <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn">Cancel</button>
-  </div>
 </form>
 </body>
 </html>

@@ -1,4 +1,5 @@
-<?php 
+<?php
+$uname=$_POST['uname'];
 $status = 0;
 $connect = mysqli_connect('localhost','root','','test');
 $sql = 'SELECT * FROM student';
@@ -8,16 +9,15 @@ if(!$result){
     die('Can not access database');
 } else {
     while($row = mysqli_fetch_assoc($result)){
-        echo '<tr>';
         while(list($key,$value)=each($row)){
-            if($value==$_POST['uname']){
+            if($value==$uname){
                 $status++;
             } 
         }
     }
 }
 if($status==1){
-    header("location:admin.php");
+    header("location:Stu1.php?uname=$uname");
 } else {
     mysqli_close($connect);
     $connect = mysqli_connect('localhost','root','','test');
@@ -28,16 +28,16 @@ if($status==1){
         die('Can not access database');
     } else {
        while($row = mysqli_fetch_assoc($result)){
-           echo '<tr>';
            while(list($key,$value)=each($row)){
-               if($value==$_POST['uname']){
+               if($value==$uname){
                    $status++;
                    if($status==1){
                         if($_POST['uname']==101){
-                            header('Refresh:1 ; URL=index.php');
+                            header("Refresh:1 ; URL=admin.php?uname=$uname");
+                            exit();
                         }
                    }
-               } 
+               }
            }
        }
     }
@@ -46,6 +46,8 @@ if($status==1){
  if($status!=1){
     echo "<script>alert('Username and Password Incorrect!');</script>";
     header('Refresh:1 ; URL=index.php');
+ }else{
+    header("Refresh:1 ; URL=teacher1.php?uname=$uname");
  }
 
 
