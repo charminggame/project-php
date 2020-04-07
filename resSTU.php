@@ -46,6 +46,10 @@
             echo '<th scope="col">'.$row["SLastname"].'</th>';
             echo '<th scope="col">'.$row["Address"].'</th>';
             echo '<th scope="col">'.$row["Major"].'</th>';
+          }else{
+            echo "<script>alert('รหัสนักศึกษาไม่ถูกต้อง');</script>";
+            header('Refresh:0 ; URL=SerachSTU.php');
+            exit();
           }
         }
       }
