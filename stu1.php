@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>Student</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -62,6 +62,7 @@
     <div class="col alert alert-primary" role="alert">
     <div class="p-3 mb-2 bg-primary text-white">Information</div>
         <a href=".php">-ดูข้อมูลรายวิชา</a><br>
+        <a href=".php">-ร้องขอเปิดรายวิชา</a><br>
     </div>
 </div>
 </div>
