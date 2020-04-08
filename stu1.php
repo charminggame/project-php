@@ -10,7 +10,7 @@
   </head>
   <body>
       <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-      <a class="navbar-brand" href="admin.php">ระบบแสดงเจตจำนงการเปิดรายวิชา</a>
+      <a class="navbar-brand" href="#">ระบบแสดงเจตจำนงการเปิดรายวิชา</a>
       <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
           aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -62,7 +62,7 @@
     <div class="col alert alert-primary" role="alert">
     <div class="p-3 mb-2 bg-primary text-white">Information</div>
         <a href=".php">-ดูข้อมูลรายวิชา</a><br>
-        <a href=".php">-ร้องขอเปิดรายวิชา</a><br>
+        <a href="REQSubj.php">-ร้องขอเปิดรายวิชา</a><br>
     </div>
 </div>
 </div>

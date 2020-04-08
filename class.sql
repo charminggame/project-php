@@ -86,9 +86,11 @@ INSERT INTO `teacher` (`TeacherID`, `TFirstname`, `TLastname`) VALUES
 
 CREATE TABLE `Ssubject` (
   `SubjectID1` int(10) ,
-  `SubjectID2` int(10) ,
+  `SubjectID2` varchar(10) ,
   `namesubject` varchar(40) ,
   `TeacherID` varchar(20) NOT NULL,
   `Npeople` int(10),
   `status` varchar(20)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+INSERT INTO `Ssubject` (`SubjectID1`, `SubjectID2`, `namesubject`, `TeacherID`,`Npeople`,`status`) 
+VALUES  (102, '301', 'INFORMATION SEARCH & PRESENT', '112' , 1, 'open');
