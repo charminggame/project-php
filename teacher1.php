@@ -56,12 +56,12 @@
     <div class="row">
     <div class="col alert alert-primary" role="alert">
     <div class="p-3 mb-2 bg-primary text-white">Search</div>
-        <a href="ค้นหานักศึกษา.php">-ค้นหานักศึกษา</a><br>
-        <a href="ค้นหารายวิชา.php">-ค้นหารายวิชา</a><br>
+        <a href="SerachSTU.php">-ค้นหานักศึกษา</a><br>
+        <a href="SerachSUJ.php">-ค้นหารายวิชา</a><br>
     </div>
     <div class="col alert alert-primary" role="alert">
     <div class="p-3 mb-2 bg-primary text-white">Information</div>
-        <a href=".php">-ดูข้อมูลรายวิชา</a><br>
+        <a href="LookSUB.php">-ดูข้อมูลรายวิชา</a><br>
     </div>
 </div>
 </div>
