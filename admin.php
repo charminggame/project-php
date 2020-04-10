@@ -64,7 +64,7 @@
     <div class="col alert alert-primary" role="alert">
     <div class="p-3 mb-2 bg-primary text-white">Information</div>
         <a href="LookSUB.php">-ดูข้อมูลรายวิชา</a><br>
-        <a href=".php">-เปิด/ปิด รายวิชา</a><br>
+        <a href="LookSUBA.php">-เปิด/ปิด รายวิชา</a><br>
     </div>
 </div>
 </div>
