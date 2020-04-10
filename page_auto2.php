@@ -48,8 +48,9 @@ if($row["SubjectID1"].$row["SubjectID2"]==$_POST["SJID"]){
         VALUES ("'.$SID1.'","'.$SID2.'","'.$SUBname.'","'.$TID.'","1");';
         $result2=mysqli_query($connect,$sql);
         mysqli_close($connect);
-        exit();
         header('Refresh:1 ; URL=LookSUB.php');
+        exit();
+        
     }
 }}}}
 ?>

@@ -20,6 +20,7 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <?php
+                    $uname=$_GET['uname'];
                     $connect = mysqli_connect('localhost','root','','test');
                     $sql = 'SELECT * FROM teacher';
                     $result = mysqli_query($connect,$sql);
@@ -62,7 +63,7 @@
     </div>
     <div class="col alert alert-primary" role="alert">
     <div class="p-3 mb-2 bg-primary text-white">Information</div>
-        <a href=".php">-ดูข้อมูลรายวิชา</a><br>
+        <a href="LookSUB.php">-ดูข้อมูลรายวิชา</a><br>
         <a href=".php">-เปิด/ปิด รายวิชา</a><br>
     </div>
 </div>

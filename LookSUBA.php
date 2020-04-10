@@ -31,6 +31,7 @@
     <tr>
 
 <?php
+  $num=0;
   $connect = mysqli_connect('localhost','root','','test');
   $sql = 'SELECT * FROM ssubject';
   $result = mysqli_query($connect,$sql);
@@ -39,13 +40,15 @@
       die('Can not access database');
   } else {
       while($row = mysqli_fetch_assoc($result)){
-            echo '<form method="post" action="LookSUBA1.php">'."\n";
+        $num=$num+1;
+            echo '<form method="post" action="page_auto3.php">'."\n";
             echo '<th scope="col">'.$row["SubjectID1"].'-'.$row["SubjectID2"].'</th>';
             echo '<th scope="col">'.$row["namesubject"].'</th>';
             echo '<th scope="col">'.$row["TeacherID"].'</th>';
             echo '<th scope="col">'.$row["Npeople"].'</th>';
             echo '<th scope="col">'.$row["status"].'</th>';
-            echo '<th scope="col"><input name="update" type="submit" value="update""></th>';
+            echo '<input name="SID'.$num.'" type="hidden" value="'.$row["SubjectID1"].$row["SubjectID2"].'">';
+            echo '<th scope="col"><input name=update'.$num.' type="submit" value="update""></th>';
             echo '</tr>';
             echo '</tbody>';
       }
