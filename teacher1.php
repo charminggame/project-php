@@ -20,6 +20,7 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <?php
+                    //ดึงข้อมูล จากdatabase มาแสดง
                     $connect = mysqli_connect('localhost','root','','test');
                     $sql = 'SELECT * FROM teacher';
                     $result = mysqli_query($connect,$sql);

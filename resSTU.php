@@ -16,6 +16,7 @@
   </nav>
   <?php
   if($_REQUEST["SID"]!=0){
+    //เช็คว่า ค่าที่ได้รับมาเป็น 0 รึเปล่า
   ?>
   <div class="jumbotron">
   <table class="table table-dark">
@@ -31,6 +32,7 @@
   <tbody>
     <tr>
   <?php
+  //ดึงข้อมูล จากdatabase มาแสดง
   $connect = mysqli_connect('localhost','root','','test');
   $sql = 'SELECT * FROM student';
   $result = mysqli_query($connect,$sql);

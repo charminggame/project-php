@@ -20,6 +20,7 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <?php
+                    //ดึงข้อมูล จากdatabase มาแสดง
                     $connect = mysqli_connect('localhost','root','','test');
                     $sql = 'SELECT * FROM student';
                     $result = mysqli_query($connect,$sql);
@@ -38,7 +39,7 @@
                     mysqli_close($connect);
                     ?>
                   </a>
-                  <div class="dropdown-menu" aria-labelledby="dropdownId">
+                  <div class="dropdown-menu" aria-labelledby="dropdownId"> <!--ปุ่มล็อคเอ้า-->
                       <a class="text-danger dropdown-item" href="index.php">Logout</a>
                   </div>
               </li>

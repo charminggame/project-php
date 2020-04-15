@@ -30,7 +30,7 @@
   <tbody>
     <tr>
 
-<?php
+<?php       //ดึงข้อมูลจาก data base มาแสดงในรูปแบบของตาราง
   $num=0;
   $connect = mysqli_connect('localhost','root','','test');
   $sql = 'SELECT * FROM ssubject';
@@ -47,6 +47,7 @@
             echo '<th scope="col">'.$row["TeacherID"].'</th>';
             echo '<th scope="col">'.$row["Npeople"].'</th>';
             echo '<th scope="col">'.$row["status"].'</th>';
+            //เมื่อกดปุ่มsubmit ที่ใส่$numไว้เพื่อแยกว่า เรากดปุ่มsubmit จากบรรทัดไหน
             echo '<input name="SID'.$num.'" type="hidden" value="'.$row["SubjectID1"].$row["SubjectID2"].'">';
             echo '<th scope="col"><input name=update'.$num.' type="submit" value="update""></th>';
             echo '</tr>';

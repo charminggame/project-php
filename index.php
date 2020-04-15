@@ -13,7 +13,7 @@
     <img src="img/Psu_logo.png" alt="Avatar" class="avatar">
   </div>
 
-  <div class="container">
+  <div class="container">     <!--ใช้จัดรูปแบบหน้าตาของ หน้าเพจ-->
     <label for="uname"><b>Username</b></label>
     <input type="text" placeholder="Enter Username" name="uname" required>
 

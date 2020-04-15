@@ -27,7 +27,7 @@
   </thead>
   <tbody>
     <tr>
-<?php
+<?php       //ดึงข้อมูลจาก data base มาแสดงในรูปแบบของตาราง
   $connect = mysqli_connect('localhost','root','','test');
   $sql = 'SELECT * FROM ssubject';
   $result = mysqli_query($connect,$sql);

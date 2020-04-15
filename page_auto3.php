@@ -10,6 +10,7 @@ if(!$result){
     while($row = mysqli_fetch_assoc($result)){
       $num=$num+1;
       if(isset($_POST["update$num"])){
+        //เช็คว่าเรากดปุ่ม submitมาจากปุ่มไหน
         $SID=$_POST["SID$num"];
         $SID1=$row["SubjectID1"];
         $SID2=$row["SubjectID2"];
@@ -25,6 +26,7 @@ if(!$result){
             $c='close';
             if($row["SubjectID1"].$row["SubjectID2"]==$SID){
             if(strlen($row["status"]) == strlen($c)){
+              //เช็คความยาวของ status ใน data base กับ คำว่า close ว่าตรงกันไหม
                mysqli_close($connect); 
                $link = mysqli_connect("localhost", "root", "", "test");
                $sql = "UPDATE ssubject SET status='open' WHERE SubjectID1='".$SID1."' and SubjectID2='".$SID2."'";

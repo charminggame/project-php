@@ -2,7 +2,7 @@
 $uname=$_POST['uname'];
 $status = 0;
 $connect = mysqli_connect('localhost','root','','test');
-$sql = 'SELECT * FROM student';
+$sql = 'SELECT * FROM student';   //เช็คว่าusername ตรงกับในdata base นักเรียนไหม
 $result = mysqli_query($connect,$sql);
 if(!$result){
     echo mysqli_error().'<br>';
@@ -21,7 +21,7 @@ if($status==1){
 } else {
     mysqli_close($connect);
     $connect = mysqli_connect('localhost','root','','test');
-    $sql = 'SELECT * FROM teacher';
+    $sql = 'SELECT * FROM teacher';   //เช็คว่าusername ตรงกับในdata base คุณครูไหม
     $result = mysqli_query($connect,$sql);
     if(!$result){
         echo mysqli_error().'<br>';
@@ -32,7 +32,7 @@ if($status==1){
                if($value==$uname){
                    $status++;
                    if($status==1){
-                        if($_POST['uname']==101){
+                        if($_POST['uname']==101){   //เช็คว่าusername ตรงกับในรหัสของ แอดมินหรือเปล่า
                             header("Refresh:1 ; URL=admin.php?uname=$uname");
                             exit();
                         }

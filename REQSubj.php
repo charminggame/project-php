@@ -22,6 +22,7 @@
     <select class="custom-select" id="inputGroupSelect01" name="SJID">
 <option selected>กรุณาเลือกวิชาที่ท่านต้องการเปิด</option>
 <?php
+//ดึงข้อมูล จากdatabase มาแสดง
 $connect = mysqli_connect('localhost','root','','test');
 $sql = 'SELECT * FROM subject';
 $result = mysqli_query($connect,$sql);

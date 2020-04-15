@@ -19,7 +19,7 @@
           <ul class="navbar-nav ml-auto p-2 bd-highlight">
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <?php
+                    <?php           //เชื่อมต่อ data base เพื่อดึงข้อมูลมาแสดง
                     $uname=$_GET['uname'];
                     $connect = mysqli_connect('localhost','root','','test');
                     $sql = 'SELECT * FROM teacher';
@@ -39,7 +39,7 @@
                     mysqli_close($connect);
                     ?>
                   </a>
-                  <div class="dropdown-menu" aria-labelledby="dropdownId">
+                  <div class="dropdown-menu" aria-labelledby="dropdownId">  <!--ปุ่มล็อคเอ้า-->
                       <a class="text-danger dropdown-item" href="index.php">Logout</a>
                   </div>
               </li>
@@ -53,7 +53,7 @@
     </div>
 </div>
 
-<div class="container">
+<div class="container">     <!--ใช้จัดรูปแบบหน้าตาของ หน้าเพจ-->
     <div class="row">
     <div class="col alert alert-primary" role="alert">
     <div class="p-3 mb-2 bg-primary text-white">Search</div>

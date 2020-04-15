@@ -13,7 +13,7 @@ if($row["SubjectID1"].$row["SubjectID2"]==$_POST["SJID"]){
     $SID1=$row["SubjectID1"];
     $SID2=$row["SubjectID2"];
     $SUBname=$row["namesubject"];
-    $TID=$row["TeacherID"];
+    $TID=$row["TeacherID"];      //เก็บตัวแปรเพื่อนำไปใช้ในการทำงานต่อๆไป
     mysqli_close($connect);
     $connect = mysqli_connect('localhost','root','','test');
     $sql = 'SELECT * FROM ssubject';
@@ -25,14 +25,15 @@ if($row["SubjectID1"].$row["SubjectID2"]==$_POST["SJID"]){
         $NPeople=0;
         $Status=0;
         while($row = mysqli_fetch_assoc($result1)){
-            if($row["SubjectID1"].$row["SubjectID2"]==$_POST["SJID"]){
+            if($row["SubjectID1"].$row["SubjectID2"]==$_POST["SJID"]){    
+                //เช็คว่ารหัสวิชา ตรงกับในdata base ไหม
                 $NPeople=$row["Npeople"];
                 $NPeople=$NPeople+1;
                 $Status=$Status+1;
             } 
     }
     mysqli_close($connect);
-    if($Status==1){
+    if($Status==1){ //อัพเดทที่ table ssubject
                 $link = mysqli_connect("localhost", "root", "", "test");
                 $sql = "UPDATE ssubject SET Npeople='".$NPeople."' WHERE SubjectID1='".$SID1."' and SubjectID2='".$SID2."'";
                 if(mysqli_query($link, $sql)){
@@ -43,6 +44,7 @@ if($row["SubjectID1"].$row["SubjectID2"]==$_POST["SJID"]){
                 mysqli_close($link);
                 exit();
     }else {
+        //เพิ่มข้อมูลเข้าdata base
         $connect = mysqli_connect("localhost","root","","test");
         $sql='INSERT INTO `ssubject` (`SubjectID1`, `SubjectID2`, `namesubject`, `TeacherID`, `Npeople`) 
         VALUES ("'.$SID1.'","'.$SID2.'","'.$SUBname.'","'.$TID.'","1");';
